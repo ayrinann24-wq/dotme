@@ -1,0 +1,365 @@
+/* CSS Document */
+
+body {
+	margin: 0;
+	font-family: "Space Mono", serif;
+	background: #ffffff;
+}
+
+.header {
+	margin: 0;
+	padding: 50px 25px 0px 25px;
+	font-family: "Space Mono", serif;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color:#010101;
+	font-size: clamp(12px, 2vw, 20px);
+	line-height: 1;
+	transition: padding .4s ease, font-size .4s ease;
+}
+
+.header h1.ayrin-header {
+	font-size: 1.6em;
+	margin: 0;
+	line-height: 1.3;
+	transition: font-size .4s ease, line-height .4s ease;
+}
+
+.header h2.ayrin-sub {
+	font-size: 0.75em;
+	margin: 0;
+	line-height: 1.4;
+	transition: font-size .4s ease, line-height .4s ease;
+}
+
+#portfolio:hover {
+	transform: scale(1.05);
+}
+
+#about-me:hover {
+	transform: scale(1.05);
+}
+
+#home:hover {
+	transform: scale(1.05);
+}
+
+.header-right {
+	text-align: end;
+	display: column;
+	align-content: center;
+	line-height: 1.4;
+	font-size: 0.65em;
+	transition: font-size .4s ease, line-height .4s ease;
+}
+
+.header-right a p {
+	margin: 0;
+	transition: transform .2s ease, font-size .4s ease;
+}
+
+.pfl-stack {
+	margin: 0 auto 50px auto;
+	color: #ffffff;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(220px, 1fr));
+	gap: 10px;
+	text-align: center;
+	padding: 100px 10px 100px 10px;
+	max-width: 1020px;
+}
+
+a {
+	color: #010101;
+	text-decoration: none;
+}
+
+.pfl0 {
+	width: 200px;
+	background: url("pfl/CAPSTONE/1.JPG");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl0:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl1 {
+	width: 120px;
+	background: url("pfl/Dua/cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl1:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl2 {
+	width: 180px;
+	background: url("pfl/AttachedToNewYork/cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl2:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl3 {
+	width: 200px;
+	background: url("pfl/CrispyGranola/cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl3:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl4 {
+	width: 160px;
+	background: url("pfl/OfficeCore/cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl4:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl5 {
+	width: 120px;
+	background: url("pfl/AncientEgyptian/cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl5:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl6 {
+	width: 120px;
+	background: url("pfl/dalivision/cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl6:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl7 {
+	width: 300px;
+	background: url("pfl/ThePretender/cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl7:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl8 {
+	width: 100px;
+	background: url("pfl/draping/Cover.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl8:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl9 {
+	width: 180px;
+	background: url("pfl/illustrations/2.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl9:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl-pink {
+	width: 200px;
+	background: url("tech/pink/cover.JPG");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl-pink:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl-snake {
+	width: 200px;
+	background: url("tech/snake/cover.jpeg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl-snake:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl-cloud {
+	width: 200px;
+	background: url("tech/cloud/cover.jpeg");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl-cloud:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl-fashion {
+	width: 200px;
+	background: url("pfl/cover.JPG");
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	margin: 0;
+	transition: transform .2s;
+	line-height: 100%;
+	text-shadow: 1px 1px #101010;
+}
+
+.pfl-fashion:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pfl-stack > a > div {
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 0;
+}
+
+.pfl-stack h3,
+.pfl-stack p {
+	color: white;
+}
+
+/* ── Mobile ────────────────────────────────────────────── */
+@media (max-width: 700px) {
+	.header {
+		padding: 20px 16px 0 16px;
+		font-size: clamp(10px, 3.5vw, 14px);
+	}
+
+	.header-right {
+		line-height: 1.2;
+	}
+
+	.pfl-stack {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 28px 12px 28px 12px;
+		gap: 10px;
+	}
+
+	.pfl0, .pfl1, .pfl2, .pfl3, .pfl4,
+	.pfl5, .pfl6, .pfl7, .pfl8, .pfl9, .pfl-cloud, .pfl-snake, .pfl-fashion, .pfl-pink {
+		width: 100%;
+		height: 180px;
+	}
+}
+
+@media (max-width: 420px) {
+	.pfl-stack {
+		grid-template-columns: 1fr;
+	}
+
+	.pfl0, .pfl1, .pfl2, .pfl3, .pfl4,
+	.pfl5, .pfl6, .pfl7, .pfl8, .pfl9, .pfl-cloud, .pfl-snake, .pfl-fashion, .pfl-pink {
+		height: 200px;
+	}
+}
