@@ -1,28 +1,139 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AYRIN©</title>
         <link rel="stylesheet" href="style.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=Creepster&family=La+Belle+Aurore&family=MedievalSharp&family=Orbitron&family=Rye&display=swap" rel="stylesheet">
-        <script src="index.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <script src="index.js" defer></script>
     </head>
     <body>
-        <!-- 
-        Challenge 1:
-        Write the HTML for your personal website.
-        -->
-        <img src="ayrin.jpeg"/>
-        <h1>Hello. My name is Ayrin.</h1>
-        <h2>Fun facts about me:</h2>
-        <ul>
-            <li>Lives in New York City</li>
-            <li>22 years old</li>
-            <li>Graduated from FIT</li>
-        </ul>
-        <p>Please connect with me on 
-           <a href="https://www.linkedin.com/in/ayrin-ann/"> LinkedIn.</a>
-        </p>
-        <input type="email" placeholder="Enter email..."></input>
-        <button>Join Newsletter</button>
+
+        <header class="site-header">
+            <nav class="header-left">
+                <a href="portfolio/index.html">Work</a>
+                <a href="#">About</a>
+                <a href="https://www.linkedin.com/in/ayrin-ann/">Contact</a>
+            </nav>
+            <div class="header-center">
+                <a href="index.html" class="brand">AYRIN©</a>
+            </div>
+            <div class="header-right">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="about-hero">
+                <div class="about-image">
+                    <img src="ayrin.jpeg" alt="Ayrin Ann" />
+                </div>
+                <div class="about-text">
+                    <p class="eyebrow">About</p>
+                    <h1>AYRIN©</h1>
+                    <p>A Technical Designer based in New York City, Ayrin Ann graduated from the Fashion Institute of Technology with a passion for bridging the gap between creative vision and technical precision. At 22, she brings garments to life from concept to construction — with a sharp eye for detail, a deep love for fashion, and a commitment to craft that shows in every flat sketch and finished piece.</p>
+                    <a href="https://www.linkedin.com/in/ayrin-ann/" class="text-link">Connect on LinkedIn →</a>
+                </div>
+            </section>
+
+            <section class="designed-in">
+                <h2 class="designed-title">Designed in New York</h2>
+                <p class="designed-body">Every project in this portfolio is a reflection of the energy, grit, and creativity that New York City inspires. Shaped by a rigorous education at FIT and the relentless pace of the fashion capital of the world, Ayrin's work spans technical illustration, draping, garment construction, and collection development — driven by the belief that great design is both felt and engineered.</p>
+            </section>
+
+            <section class="categories">
+                <p class="eyebrow categories-eyebrow">My Work</p>
+                <div class="categories-grid">
+                    <a href="portfolio/pfl/CAPSTONE/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="Capstone" />
+                        </div>
+                        <span class="cat-label">Capstone</span>
+                    </a>
+                    <a href="portfolio/pfl/fashion/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="Fashion Design" />
+                        </div>
+                        <span class="cat-label">Fashion Design</span>
+                    </a>
+                    <a href="portfolio/pfl/illustrations/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="Illustrations" />
+                        </div>
+                        <span class="cat-label">Illustrations</span>
+                    </a>
+                    <a href="portfolio/pfl/draping/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="Draping" />
+                        </div>
+                        <span class="cat-label">Draping</span>
+                    </a>
+                    <a href="portfolio/pfl/ThePretender/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="The Pretender" />
+                        </div>
+                        <span class="cat-label">The Pretender</span>
+                    </a>
+                    <a href="portfolio/pfl/AttachedToNewYork/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="Attached to New York" />
+                        </div>
+                        <span class="cat-label">Attached to New York</span>
+                    </a>
+                    <a href="portfolio/pfl/OfficeCore/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="Office Core" />
+                        </div>
+                        <span class="cat-label">Office Core</span>
+                    </a>
+                    <a href="portfolio/pfl/Dua/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="ayrin.jpeg" alt="Dua" />
+                        </div>
+                        <span class="cat-label">Dua</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+
+            <div class="footer-main">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Connect</h4>
+                    <a href="https://www.linkedin.com/in/ayrin-ann/">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <h4 class="footer-col-title footer-col-title--spaced">Info</h4>
+                    <a href="#">About</a>
+                    <a href="https://www.linkedin.com/in/ayrin-ann/">Contact</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <p class="newsletter-desc">Subscribe to my newsletter and be the first to know about new collections and creative work.</p>
+                    <div class="newsletter-row">
+                        <input type="email" placeholder="Enter email" />
+                        <button class="newsletter-btn">Join</button>
+                    </div>
+                    <label class="newsletter-check">
+                        <input type="checkbox" />
+                        <span>I agree to receive updates according to the Privacy Policy</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <span>Copyright © 2026 AYRIN© All Rights Reserved</span>
+            </div>
+
+        </footer>
+
     </body>
 </html>
-
