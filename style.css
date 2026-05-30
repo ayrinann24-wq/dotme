@@ -6,15 +6,15 @@
     --romantic: 'La Belle Aurore', cursive;
     --scary: 'Creepster', cursive;
     --cowboy: 'Rye', cursive;
-    --regular: 'Inter', sans-serif;
+    --regular: Arial, sans-serif;
     --font: var(--regular);
     --sharp: 0;
     --soft: 10px;
     --round: 100px;
     --image: var(--sharp);
-    --background: #f8f6f3;
+    --background: #ffffff;
     --text: #111111;
-    --light: #f8f6f3;
+    --light: #ffffff;
     --dark: #111111;
     --border: rgba(17, 17, 17, 0.1);
 }
@@ -68,21 +68,7 @@ a {
 
 .header-left {
     display: flex;
-    gap: 28px;
-}
-
-.header-left a {
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text);
-    text-decoration: none;
-    opacity: 0.75;
-    transition: opacity 0.2s;
-}
-
-.header-left a:hover {
-    opacity: 1;
+    align-items: center;
 }
 
 .header-center {
@@ -91,10 +77,10 @@ a {
 
 .brand {
     font-family: 'Space Mono', monospace;
-    font-size: 0.9rem;
-    letter-spacing: 0.18em;
+    font-size: clamp(1.2rem, 3.2vw, 2rem);
+    letter-spacing: normal;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--text);
     text-decoration: none;
 }
@@ -105,19 +91,90 @@ a {
     align-items: center;
 }
 
-.search-btn {
+.icon-label-btn {
     background: none;
     border: none;
     cursor: pointer;
     padding: 4px;
     color: var(--text);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    opacity: 0.75;
+    gap: 4px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-family: Arial, sans-serif;
+}
+
+.icon-label-btn span {
+    font-size: 0.55rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.icon-label-btn:hover {
+    opacity: 1;
+}
+
+/* ─── MENU OVERLAY ─── */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--background);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu-close {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    padding: 4px;
+}
+
+.menu-close:hover {
+    opacity: 1;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu-nav a {
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.85;
     transition: opacity 0.2s;
 }
 
-.search-btn:hover {
+.menu-nav a:hover {
     opacity: 1;
 }
 
@@ -125,7 +182,8 @@ a {
 
 .about-hero {
     display: flex;
-    min-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
+    overflow: hidden;
 }
 
 .about-image {
@@ -146,7 +204,11 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 80px 72px;
+    background: #000000;
+    color: #ffffff;
 }
 
 .eyebrow {
@@ -169,13 +231,14 @@ a {
 }
 
 .about-text p {
-    font-size: 0.875rem;
-    line-height: 1.85;
-    letter-spacing: 0.02em;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
     margin: 0 0 40px;
     max-width: 420px;
-    opacity: 0.75;
-    font-weight: 300;
+    opacity: 0.85;
+    font-weight: 400;
+    color: #ffffff;
 }
 
 .text-link {
@@ -185,7 +248,7 @@ a {
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
-    color: var(--text);
+    color: #ffffff;
 }
 
 /* ─── DESIGNED IN ─── */
@@ -205,13 +268,13 @@ a {
 }
 
 .designed-body {
-    font-size: 0.875rem;
-    line-height: 1.9;
-    letter-spacing: 0.02em;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
     max-width: 600px;
     margin: 0 auto;
     opacity: 0.7;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* ─── CATEGORIES ─── */
@@ -228,7 +291,7 @@ a {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
 }
 
@@ -286,12 +349,13 @@ a {
 }
 
 .newsletter-desc {
-    font-family: Inter, Arial, sans-serif;
-    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     color: rgb(68, 68, 68);
-    line-height: 1.7;
+    line-height: 24px;
+    letter-spacing: 0.1px;
     margin: 0 0 24px;
 }
 
@@ -305,12 +369,12 @@ a {
 .newsletter-row input {
     flex: 1;
     height: 66px;
-    padding: 0;
+    padding: 22px 0 0 0;
     border: none;
     border-bottom: 1px solid var(--text);
     color: rgb(68, 68, 68);
     background: none;
-    font-family: Inter, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.1px;
@@ -343,6 +407,7 @@ a {
     transition: background 0.2s, color 0.2s;
     border-radius: 0;
     margin-left: 16px;
+    margin-bottom: 20px;
 }
 
 .newsletter-btn:hover {
@@ -372,7 +437,7 @@ a {
 }
 
 .footer-col-title {
-    font-family: Inter, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -387,7 +452,7 @@ a {
 }
 
 .footer-col a {
-    font-family: Inter, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -402,7 +467,7 @@ a {
 }
 
 .newsletter-check span {
-    font-family: Inter, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -412,8 +477,8 @@ a {
 
 .footer-copyright {
     padding: 20px 80px;
-    font-family: Inter, Arial, sans-serif;
-    font-size: 14px;
+    font-family: sans-serif;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     color: rgb(68, 68, 68);
