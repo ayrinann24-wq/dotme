@@ -95,20 +95,20 @@ a {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    padding: 4px 8px;
     color: var(--text);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 4px;
+    gap: 7px;
     opacity: 0.8;
     transition: opacity 0.2s;
     font-family: Arial, sans-serif;
 }
 
 .icon-label-btn span {
-    font-size: 0.55rem;
-    letter-spacing: 0.14em;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     line-height: 1;
 }
@@ -281,18 +281,55 @@ a {
 
 .categories {
     border-top: 1px solid var(--border);
-    padding: 56px 40px 80px;
+    padding: 0;
+}
+
+.categories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
 }
 
 .categories-eyebrow {
-    text-align: center;
-    margin: 0 0 40px;
+    margin: 0;
+    text-align: left;
 }
 
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.categories-arrows {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    color: var(--text);
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-btn:hover {
+    opacity: 1;
+}
+
+.categories-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     gap: 2px;
+}
+
+.categories-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .cat-card {
@@ -300,11 +337,14 @@ a {
     text-decoration: none;
     color: var(--text);
     overflow: hidden;
+    flex-shrink: 0;
+    width: 33.333vw;
 }
 
 .cat-img-wrap {
-    aspect-ratio: 3 / 4;
+    height: 72vh;
     overflow: hidden;
+    position: relative;
 }
 
 .cat-img-wrap img {
@@ -320,13 +360,16 @@ a {
 }
 
 .cat-label {
-    display: block;
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    padding: 16px 4px 8px;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
     text-align: center;
-    font-weight: 400;
+    color: #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 /* ─── FOOTER ─── */

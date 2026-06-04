@@ -26,7 +26,7 @@
         <header class="site-header">
             <div class="header-left">
                 <button class="icon-label-btn" id="menuBtn" aria-label="Menu">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="4" y1="6" x2="20" y2="6"/>
                         <line x1="4" y1="12" x2="20" y2="12"/>
                         <line x1="4" y1="18" x2="20" y2="18"/>
@@ -39,11 +39,11 @@
             </div>
             <div class="header-right">
                 <button class="icon-label-btn" aria-label="Search">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"/>
                         <path d="m21 21-4.35-4.35"/>
                     </svg>
-                    <span>Search</span>
+                    <span>Search_</span>
                 </button>
             </div>
         </header>
@@ -54,6 +54,14 @@
             const menuClose = document.getElementById('menuClose');
             menuBtn.addEventListener('click', () => menuOverlay.classList.add('open'));
             menuClose.addEventListener('click', () => menuOverlay.classList.remove('open'));
+
+            const scroll = document.getElementById('categoriesScroll');
+            document.getElementById('arrowPrev').addEventListener('click', () => {
+                scroll.scrollBy({ left: -scroll.offsetWidth / 3, behavior: 'smooth' });
+            });
+            document.getElementById('arrowNext').addEventListener('click', () => {
+                scroll.scrollBy({ left: scroll.offsetWidth / 3, behavior: 'smooth' });
+            });
         </script>
 
         <main>
@@ -73,25 +81,39 @@
             </section>
 
             <section class="categories">
-                <p class="eyebrow categories-eyebrow">My Work</p>
-                <div class="categories-grid">
+                <div class="categories-header">
+                    <p class="eyebrow categories-eyebrow">Shop My_</p>
+                    <div class="categories-arrows">
+                        <button class="arrow-btn" id="arrowPrev" aria-label="Previous">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="arrow-btn" id="arrowNext" aria-label="Next">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="categories-scroll" id="categoriesScroll">
+                    <a href="portfolio/tech/pink/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="product1.jpeg" alt="Pink Blouse" />
+                            <span class="cat-label">Pink Blouse</span>
+                        </div>
+                    </a>
                     <a href="portfolio/tech/cloud/index.html" class="cat-card">
                         <div class="cat-img-wrap">
-                            <img src="ayrin.jpeg" alt="Cloud Pants" />
+                            <img src="product2.jpeg" alt="Cloud Pants" />
+                            <span class="cat-label">Cloud Pants</span>
                         </div>
-                        <span class="cat-label">Cloud Pants</span>
                     </a>
                     <a href="portfolio/tech/snake/index.html" class="cat-card">
                         <div class="cat-img-wrap">
-                            <img src="ayrin.jpeg" alt="Snake Jeans" />
+                            <img src="product3.jpeg" alt="Snake Jeans" />
+                            <span class="cat-label">Snake Jeans</span>
                         </div>
-                        <span class="cat-label">Snake Jeans</span>
-                    </a>
-                    <a href="portfolio/tech/pink/index.html" class="cat-card">
-                        <div class="cat-img-wrap">
-                            <img src="ayrin.jpeg" alt="Pink Blouse" />
-                        </div>
-                        <span class="cat-label">Pink Blouse</span>
                     </a>
                 </div>
             </section>
