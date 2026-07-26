@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AYRIN©</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+
+        <div class="menu-overlay" id="menuOverlay">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <nav class="menu-nav">
+                <a href="portfolio/index.html">Work</a>
+                <a href="#">About</a>
+                <a href="https://www.linkedin.com/in/ayrin-ann/">Contact</a>
+            </nav>
+        </div>
+
+        <header class="site-header">
+            <div class="header-left">
+                <button class="icon-label-btn" id="menuBtn" aria-label="Menu">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" y1="6" x2="20" y2="6"/>
+                        <line x1="4" y1="12" x2="20" y2="12"/>
+                        <line x1="4" y1="18" x2="20" y2="18"/>
+                    </svg>
+                    <span>Menu</span>
+                </button>
+            </div>
+            <div class="header-center">
+                <a href="index.html" class="brand">AYRIN©</a>
+            </div>
+            <div class="header-right">
+                <button class="icon-label-btn" aria-label="Search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <span>Search_</span>
+                </button>
+            </div>
+        </header>
+
+        <script>
+            const menuBtn = document.getElementById('menuBtn');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const menuClose = document.getElementById('menuClose');
+            menuBtn.addEventListener('click', () => menuOverlay.classList.add('open'));
+            menuClose.addEventListener('click', () => menuOverlay.classList.remove('open'));
+
+            const scroll = document.getElementById('categoriesScroll');
+            document.getElementById('arrowPrev').addEventListener('click', () => {
+                scroll.scrollBy({ left: -scroll.offsetWidth / 3, behavior: 'smooth' });
+            });
+            document.getElementById('arrowNext').addEventListener('click', () => {
+                scroll.scrollBy({ left: scroll.offsetWidth / 3, behavior: 'smooth' });
+            });
+        </script>
+
+        <main>
+
+            <section class="about-hero">
+                <div class="about-image">
+                    <img src="face.JPG" alt="Ayrin Ann" />
+                </div>
+                <div class="about-text">
+                    <p>I'm a Technical Designer based in New York City. I graduated from the Fashion Institute of Technology with a passion for bridging the gap between creative vision and technical precision. At 22, I bring garments to life from concept to construction — with a sharp eye for detail, a deep love for fashion, and a commitment to craft that shows in every flat sketch and finished piece.</p>
+                </div>
+            </section>
+
+            <section class="designed-in">
+                <h2 class="designed-title">Designed in New York</h2>
+                <p class="designed-body">Every project in this portfolio is a reflection of the energy, grit, and creativity that New York City inspires. Shaped by a rigorous education at FIT and the relentless pace of the fashion capital of the world, Ayrin's work spans technical illustration, draping, garment construction, and collection development — driven by the belief that great design is both felt and engineered.</p>
+            </section>
+
+            <section class="categories">
+                <div class="categories-header">
+                    <p class="eyebrow categories-eyebrow">Shop My_</p>
+                    <div class="categories-arrows">
+                        <button class="arrow-btn" id="arrowPrev" aria-label="Previous">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="arrow-btn" id="arrowNext" aria-label="Next">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="categories-scroll" id="categoriesScroll">
+                    <a href="portfolio/tech/pink/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="product1.jpeg" alt="Pink Blouse" />
+                            <span class="cat-label">Pink Blouse</span>
+                        </div>
+                    </a>
+                    <a href="portfolio/tech/cloud/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="product2.jpeg" alt="Cloud Pants" />
+                            <span class="cat-label">Cloud Pants</span>
+                        </div>
+                    </a>
+                    <a href="portfolio/tech/snake/index.html" class="cat-card">
+                        <div class="cat-img-wrap">
+                            <img src="product3.jpeg" alt="Snake Jeans" />
+                            <span class="cat-label">Snake Jeans</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+
+            <div class="footer-main">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Connect</h4>
+                    <a href="https://www.linkedin.com/in/ayrin-ann/">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <h4 class="footer-col-title footer-col-title--spaced">Info</h4>
+                    <a href="#">About</a>
+                    <a href="https://www.linkedin.com/in/ayrin-ann/">Contact</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <p class="newsletter-desc">Subscribe to my newsletter and be the first to know about new collections and creative work.</p>
+                    <div class="newsletter-row">
+                        <input type="email" placeholder="Enter email" />
+                        <button class="newsletter-btn">Join</button>
+                    </div>
+                    <label class="newsletter-check">
+                        <input type="checkbox" />
+                        <span>I agree to receive updates according to the Privacy Policy</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <span>Copyright © 2026 AYRIN© All Rights Reserved</span>
+            </div>
+
+        </footer>
+
+    </body>
+</html>
