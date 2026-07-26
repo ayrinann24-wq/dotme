@@ -4,19 +4,19 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ayrin Ann</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B9%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --pink: #ff3d81;
-    --coral: #ff8452;
-    --violet: #9a3ce0;
-    --indigo: #4b2a8f;
-    --gold: #ffcf4d;
-    --cream: #fff6ea;
-    --teal: #1ec9b7;
+    --noir: #170a11;
+    --wine: #3a1024;
+    --plum: #5c2b45;
+    --rosegold: #c98d87;
+    --champagne: #e3c491;
+    --blush: #f6e2e0;
+    --ivory: #faf6f1;
   }
 
   * { box-sizing: border-box; }
@@ -25,7 +25,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #0d0614;
+    background: var(--noir);
     overflow: hidden;
   }
 
@@ -36,131 +36,142 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background:
+      radial-gradient(ellipse at 50% 28%, var(--wine) 0%, var(--noir) 55%, #0c0509 100%);
   }
 
-  /* ---- mesh-gradient blob background ---- */
-  .blob {
+  /* ---- ambient silk-light blooms ---- */
+  .bloom {
     position: fixed;
     border-radius: 50%;
-    filter: blur(70px);
-    opacity: 0.75;
+    filter: blur(80px);
     will-change: transform;
     z-index: 0;
   }
-  .blob-1 {
-    width: 55vmax; height: 55vmax;
-    top: -18vmax; left: -14vmax;
-    background: radial-gradient(circle at 30% 30%, var(--pink), transparent 70%);
-    animation: float1 22s ease-in-out infinite;
+  .bloom-1 {
+    width: 46vmax; height: 46vmax;
+    top: -14vmax; left: -12vmax;
+    background: radial-gradient(circle at 35% 35%, var(--rosegold), transparent 70%);
+    opacity: 0.32;
+    animation: drift1 28s ease-in-out infinite;
   }
-  .blob-2 {
-    width: 60vmax; height: 60vmax;
-    bottom: -22vmax; right: -18vmax;
-    background: radial-gradient(circle at 60% 60%, var(--violet), transparent 70%);
-    animation: float2 26s ease-in-out infinite;
+  .bloom-2 {
+    width: 50vmax; height: 50vmax;
+    bottom: -18vmax; right: -14vmax;
+    background: radial-gradient(circle at 60% 60%, var(--plum), transparent 70%);
+    opacity: 0.4;
+    animation: drift2 34s ease-in-out infinite;
   }
-  .blob-3 {
-    width: 40vmax; height: 40vmax;
-    top: 10%; right: 5%;
-    background: radial-gradient(circle at 50% 50%, var(--coral), transparent 70%);
-    animation: float3 19s ease-in-out infinite;
-  }
-  .blob-4 {
-    width: 34vmax; height: 34vmax;
-    bottom: 5%; left: 8%;
-    background: radial-gradient(circle at 50% 50%, var(--gold), transparent 70%);
-    opacity: 0.5;
-    animation: float1 24s ease-in-out infinite reverse;
-  }
-  .blob-5 {
-    width: 26vmax; height: 26vmax;
-    top: 42%; left: 46%;
-    background: radial-gradient(circle at 50% 50%, var(--teal), transparent 70%);
-    opacity: 0.35;
-    animation: float3 30s ease-in-out infinite;
+  .bloom-3 {
+    width: 24vmax; height: 24vmax;
+    top: 38%; left: 44%;
+    background: radial-gradient(circle at 50% 50%, var(--champagne), transparent 70%);
+    opacity: 0.16;
+    animation: drift1 24s ease-in-out infinite reverse;
   }
 
-  @keyframes float1 {
+  @keyframes drift1 {
     0%, 100% { transform: translate(0, 0) scale(1); }
-    33%      { transform: translate(6vw, 4vh) scale(1.1); }
-    66%      { transform: translate(-4vw, 6vh) scale(0.92); }
+    50%      { transform: translate(2.5vw, 2vh) scale(1.05); }
   }
-  @keyframes float2 {
+  @keyframes drift2 {
     0%, 100% { transform: translate(0, 0) scale(1); }
-    40%      { transform: translate(-5vw, -6vh) scale(1.08); }
-    75%      { transform: translate(4vw, -3vh) scale(0.95); }
-  }
-  @keyframes float3 {
-    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-    50%      { transform: translate(-6vw, 5vh) rotate(20deg) scale(1.12); }
+    50%      { transform: translate(-2vw, -2.5vh) scale(1.04); }
   }
 
-  /* ---- texture overlays: dot grid + diagonal stripes ---- */
-  .pattern {
+  /* ---- fine grain overlay ---- */
+  .grain {
     position: fixed;
     inset: 0;
     z-index: 1;
     pointer-events: none;
-  }
-  .pattern.dots {
-    background-image: radial-gradient(var(--cream) 1.4px, transparent 1.4px);
-    background-size: 34px 34px;
-    opacity: 0.06;
+    background-image: radial-gradient(var(--blush) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.05;
     mix-blend-mode: overlay;
-  }
-  .pattern.stripes {
-    background-image: repeating-linear-gradient(
-      115deg,
-      transparent 0 38px,
-      rgba(255, 246, 234, 0.045) 38px 40px
-    );
-    z-index: 2;
   }
 
   .vignette {
     position: fixed;
     inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(8, 4, 8, 0.6) 100%);
+  }
+
+  /* ---- falling petals ---- */
+  .petal {
+    position: fixed;
     z-index: 2;
     pointer-events: none;
-    background: radial-gradient(ellipse at center, transparent 45%, rgba(6, 3, 12, 0.65) 100%);
+  }
+  .petal svg { display: block; }
+  .petal-1 { top: 18%; left: 12%; width: 13px; color: var(--rosegold); opacity: 0.4; animation: fall 15s ease-in-out infinite; }
+  .petal-2 { top: 64%; right: 14%; width: 10px; color: var(--champagne); opacity: 0.35; animation: fall 12s ease-in-out infinite 2s; }
+  .petal-3 { top: 30%; right: 22%; width: 9px; color: var(--blush); opacity: 0.3; animation: fall 18s ease-in-out infinite 4s; }
+
+  @keyframes fall {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50%      { transform: translate(-0.6em, 1.4em) rotate(50deg); }
   }
 
-  /* ---- scattered decorative art ---- */
-  .deco {
-    position: fixed;
-    color: var(--gold);
-    opacity: 0.65;
-    z-index: 3;
-    pointer-events: none;
+  /* ---- monogram crest ---- */
+  .crest {
+    position: relative;
+    z-index: 4;
+    width: clamp(52px, 7vw, 70px);
+    height: clamp(52px, 7vw, 70px);
+    margin-bottom: clamp(1.4rem, 4vw, 2.2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .deco svg { display: block; }
+  .crest::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px dashed var(--rosegold);
+    opacity: 0.4;
+    animation: spin-slow 90s linear infinite;
+  }
+  .crest-inner {
+    width: 78%;
+    height: 78%;
+    border-radius: 50%;
+    border: 1px solid var(--champagne);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(0.7rem, 1.6vw, 0.9rem);
+    letter-spacing: 0.3em;
+    color: var(--champagne);
+    padding-left: 0.3em;
+  }
 
-  .spark-1 { top: 12%;  left: 10%;  width: 26px; animation: drift 9s ease-in-out infinite; }
-  .spark-2 { top: 20%;  right: 13%; width: 18px; color: var(--cream); animation: drift 7s ease-in-out infinite 1s; }
-  .spark-3 { bottom: 16%; left: 16%; width: 20px; color: var(--pink); animation: drift 11s ease-in-out infinite 0.5s; }
-  .spark-4 { bottom: 22%; right: 11%; width: 30px; animation: drift 10s ease-in-out infinite 2s; }
-  .spark-5 { top: 46%; left: 6%; width: 14px; color: var(--teal); animation: drift 8s ease-in-out infinite 1.5s; }
-
-  .scallop {
-    top: 8%; right: 7%;
-    width: 92px;
-    opacity: 0.35;
-    animation: spin-slow 60s linear infinite;
-  }
-  .swash {
-    bottom: 9%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 220px;
-    opacity: 0.55;
-  }
-
-  @keyframes drift {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50%      { transform: translateY(-16px) rotate(14deg); }
-  }
   @keyframes spin-slow {
     to { transform: rotate(360deg); }
+  }
+
+  /* ---- hairline dividers ---- */
+  .divider {
+    position: relative;
+    z-index: 4;
+    width: 68px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--champagne), transparent);
+    margin: clamp(0.9rem, 2.6vw, 1.5rem) 0;
+  }
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: var(--champagne);
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 
   /* ---- the name ---- */
@@ -176,121 +187,148 @@
   h1.name {
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    gap: 0.4em;
-    font-family: 'Playfair Display', 'Didot', Georgia, serif;
-    font-weight: 900;
-    font-size: clamp(3.2rem, 13vw, 9.5rem);
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     line-height: 1;
-    letter-spacing: -0.01em;
     text-align: center;
   }
 
   .first {
     font-style: italic;
-    color: var(--cream);
-    text-shadow:
-      0 0 40px rgba(255, 61, 129, 0.45),
-      0 0 90px rgba(154, 60, 224, 0.35);
+    font-weight: 500;
+    font-size: clamp(3.4rem, 13vw, 8.4rem);
+    color: var(--blush);
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .first {
+      color: transparent;
+      background-image: linear-gradient(100deg, var(--blush) 42%, var(--ivory) 50%, var(--blush) 58%);
+      background-size: 240% 100%;
+      background-position: 200% 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmer 7s ease-in-out infinite;
+    }
+  }
+
+  @keyframes shimmer {
+    0%, 20% { background-position: 200% 0; }
+    60%, 100% { background-position: -40% 0; }
   }
 
   a.last {
     position: relative;
-    color: var(--gold);
+    margin-top: 0.7em;
+    color: var(--rosegold);
     text-decoration: none;
-    font-style: italic;
-    outline-offset: 10px;
-    border-radius: 6px;
-    background-image: linear-gradient(var(--pink), var(--pink));
-    background-repeat: no-repeat;
-    background-position: 0 92%;
-    background-size: 0% 3px;
-    transition: background-size 0.45s ease, color 0.35s ease, text-shadow 0.35s ease;
-    text-shadow:
-      0 0 30px rgba(255, 207, 77, 0.5),
-      0 0 80px rgba(255, 132, 82, 0.3);
-    animation: hop 5s ease-in-out infinite;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(0.95rem, 2.4vw, 1.3rem);
+    letter-spacing: 0.5em;
+    padding-left: 0.5em;
+    outline-offset: 8px;
+    transition: color 0.4s ease, letter-spacing 0.4s ease;
+  }
+
+  a.last::after {
+    content: '';
+    position: absolute;
+    left: 0.5em;
+    right: 0;
+    bottom: -0.5em;
+    height: 1px;
+    background: var(--champagne);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
   }
 
   a.last:hover,
   a.last:focus-visible {
-    color: var(--pink);
-    background-size: 100% 3px;
-    text-shadow:
-      0 0 30px rgba(255, 61, 129, 0.65),
-      0 0 90px rgba(255, 207, 77, 0.45);
-    animation: hop-hover 0.9s ease-in-out infinite;
+    color: var(--blush);
+    letter-spacing: 0.6em;
+  }
+
+  a.last:hover::after,
+  a.last:focus-visible::after {
+    transform: scaleX(1);
   }
 
   a.last:focus-visible {
-    outline: 2px dashed var(--gold);
+    outline: 1px dashed var(--champagne);
   }
 
-  @keyframes hop {
-    0%, 55%, 100% { transform: translateY(0) rotate(0deg); }
-    8%            { transform: translateY(-0.22em) rotate(-5deg); }
-    16%           { transform: translateY(0) rotate(3deg); }
-    24%           { transform: translateY(-0.12em) rotate(-2deg); }
-    32%           { transform: translateY(0) rotate(0deg); }
+  /* ---- botanical flourish ---- */
+  .flourish {
+    position: relative;
+    z-index: 4;
+    width: 150px;
+    color: var(--rosegold);
+    opacity: 0.55;
+    margin-top: clamp(0.6rem, 2vw, 1rem);
+    animation: sway 10s ease-in-out infinite;
+    transform-origin: 4px 54px;
   }
-  @keyframes hop-hover {
-    0%, 100% { transform: translateY(0) rotate(-2deg); }
-    50%      { transform: translateY(-0.2em) rotate(3deg); }
+  .flourish svg { display: block; }
+
+  @keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(2deg); }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .blob, .deco, a.last { animation: none !important; }
+    .bloom, .petal, .crest::before, .first, a.last, .flourish { animation: none !important; }
+  }
+
+  @media (max-width: 420px) {
+    .flourish { width: 110px; }
   }
 </style>
 </head>
 <body>
 
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-  <div class="blob blob-4"></div>
-  <div class="blob blob-5"></div>
+  <div class="bloom bloom-1"></div>
+  <div class="bloom bloom-2"></div>
+  <div class="bloom bloom-3"></div>
 
-  <div class="pattern dots"></div>
-  <div class="pattern stripes"></div>
+  <div class="grain"></div>
   <div class="vignette"></div>
 
-  <div class="deco spark-1" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="100%" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0Z"/></svg>
+  <div class="petal petal-1" aria-hidden="true">
+    <svg viewBox="0 0 16 16" width="100%" fill="currentColor"><path d="M8,0 C14,4 14,12 8,16 C2,12 2,4 8,0 Z"/></svg>
   </div>
-  <div class="deco spark-2" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="100%" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0Z"/></svg>
+  <div class="petal petal-2" aria-hidden="true">
+    <svg viewBox="0 0 16 16" width="100%" fill="currentColor"><path d="M8,0 C14,4 14,12 8,16 C2,12 2,4 8,0 Z"/></svg>
   </div>
-  <div class="deco spark-3" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="100%" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0Z"/></svg>
-  </div>
-  <div class="deco spark-4" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="100%" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0Z"/></svg>
-  </div>
-  <div class="deco spark-5" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="100%" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0Z"/></svg>
-  </div>
-
-  <div class="deco scallop" aria-hidden="true">
-    <svg viewBox="0 0 100 100" width="100%" fill="none" stroke="currentColor" stroke-width="1.4">
-      <circle cx="50" cy="50" r="46" stroke-dasharray="3 9" />
-      <circle cx="50" cy="50" r="34" />
-    </svg>
-  </div>
-
-  <div class="deco swash" aria-hidden="true">
-    <svg viewBox="0 0 220 40" width="100%" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-      <path d="M2 20c20-18 40-18 55 0s35 18 55 0 35-18 55 0 35 18 51 0" />
-      <circle cx="110" cy="20" r="3" fill="currentColor" stroke="none" />
-    </svg>
+  <div class="petal petal-3" aria-hidden="true">
+    <svg viewBox="0 0 16 16" width="100%" fill="currentColor"><path d="M8,0 C14,4 14,12 8,16 C2,12 2,4 8,0 Z"/></svg>
   </div>
 
   <main class="stage">
+    <div class="crest" aria-hidden="true">
+      <div class="crest-inner">A·A</div>
+    </div>
+
+    <div class="divider"></div>
+
     <h1 class="name">
-      <span class="first">Ayrin</span><a href="index-ayrin.html" class="last">Ann</a>
+      <span class="first">Ayrin</span><a href="index-ayrin.html" class="last">ANN</a>
     </h1>
+
+    <div class="divider"></div>
+
+    <div class="flourish" aria-hidden="true">
+      <svg viewBox="0 0 140 60" width="100%" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+        <path d="M4,54 C30,50 55,40 70,18" />
+        <path d="M0,0 C4,-6 10,-6 14,0 C10,6 4,6 0,0 Z" transform="translate(18,47) rotate(-30) scale(0.9)"/>
+        <path d="M0,0 C4,-6 10,-6 14,0 C10,6 4,6 0,0 Z" transform="translate(30,40) rotate(20) scale(0.8)"/>
+        <path d="M0,0 C4,-6 10,-6 14,0 C10,6 4,6 0,0 Z" transform="translate(42,32) rotate(-25) scale(0.7)"/>
+        <path d="M0,0 C4,-6 10,-6 14,0 C10,6 4,6 0,0 Z" transform="translate(54,25) rotate(15) scale(0.6)"/>
+        <circle cx="72" cy="16" r="2.4" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
   </main>
 
 </body>
