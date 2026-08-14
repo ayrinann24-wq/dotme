@@ -58,26 +58,14 @@ a:link, a:visited {
 
 .ayrin-summary {
     position: absolute;
-    top: 140px;
+    top: 135px;
     left: 40px;
     width: 673px;
-    height: 80px;
+    height: 69px;
     font-family: "Poppins", serif;
     font-size: 12px;
 	font-weight: 250;
     line-height: 18px;
-}
-
-.ayrin-photo {
-    background-image: url("./dp3.jpg");
-    background-size: 180px;
-    background-position: 168px -42px;
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    width: 160px;
-    height: 160px;
-	border: none;
 }
 
 .in-box-title {
@@ -91,54 +79,27 @@ a:link, a:visited {
 	font-weight: 350;
 }
 
-.ayrin-skills {
-    position: absolute;
-    top: 230px;
-    left: 40px;
-    width: 673px;
-    height: 90px;
-}
-
-.ayrin-skills-title {
-    position: absolute;
-    top: 0;
-    left: -1px;
-    width: 188px;
-	border: none;
-}
-
-.ayrin-skills-summary {
-    position: absolute;
-    top: 0;
-    left: 188px;
-    width: 484px;
-	border: none;
-    line-height: 18px;
-	font-size: 12px;
-	font-weight: 250;
-}
-
 .ayrin-technical {
     position: absolute;
-    top: 330px;
+    top: 219px;
     left: 40px;
     width: 673px;
-    height: 140px;
+    height: 69px;
 }
 
 .ayrin-technical-title {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: -1px;
-    width: 188px;
+    width: 228px;
 	border: none;
 }
 
 .ayrin-technical-summary {
     position: absolute;
-    top: 0;
-    left: 188px;
-    width: 484px;
+    top: -1px;
+    left: 228px;
+    width: 444px;
 	border: none;
     line-height: 18px;
 	font-size: 12px;
@@ -147,37 +108,37 @@ a:link, a:visited {
 
 .ayrin-education {
     position: absolute;
-    top: 482px;
+    top: 303px;
     left: 40px;
     width: 673px;
-    height: 144px;
+    height: 339px;
 }
 
 .ayrin-education-title {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: -1px;
-    width: 188px;
+    width: 228px;
 	border: none;
 }
 
 .ayrin-education-summary {
     position: absolute;
-    top: 0;
-    left: 188px;
-    width: 484px;
+    top: -1px;
+    left: 228px;
+    width: 444px;
 	border: none;
-	line-height: 18px; 
+	line-height: 18px;
 	font-size: 12px;
 	font-weight: 250;
 }
 
 .ayrin-experience {
     position: absolute;
-    top: 638px;
+    top: 657px;
     left: 40px;
     width: 673px;
-    height: 180px;
+    height: 195px;
 }
 
 .ayrin-experience-title {
@@ -201,10 +162,10 @@ a:link, a:visited {
 
 .ayrin-contact {
     position: absolute;
-    top: 828px;
+    top: 867px;
     left: 40px;
     width: 673px;
-    height: 70px;
+    height: 51px;
 }
 
 .ayrin-contact-title {
@@ -228,9 +189,10 @@ a:link, a:visited {
 
 .ayrin-info {
 	position: absolute;
-    top: 920px;
+    top: 933px;
     left: 40px;
     width: 673px;
+    height: 32px;
 	border: none;
 }
 
